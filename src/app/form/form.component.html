@@ -1,0 +1,89 @@
+
+<div class="w-75 mx-auto py-5">
+  <form [formGroup]="form" (ngSubmit)="submitForm(form)">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group mb-1">
+          <label class="pb-2">contact id *(Please use the value 1 for companies or 2 for persons)</label>
+          <input formControlName="contact_type_id" type="number" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Name *</label>
+          <input formControlName="name_1" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Salutation</label>
+          <input formControlName="salutation_id" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Address</label>
+          <input formControlName="address" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">postcode</label>
+          <input formControlName="postcode" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">City</label>
+          <input formControlName="city" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Country id</label>
+          <input formControlName="country_id" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Mail</label>
+          <input formControlName="mail" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Mail Second</label>
+          <input formControlName="mail_second" type="text" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group mb-1">
+          <label class="pb-2">Phone Fixed</label>
+          <input formControlName="phone_fixed" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Phone Fixed Second</label>
+          <input formControlName="phone_fixed_second" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Phone Mobile</label>
+          <input formControlName="phone_mobile" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Fax</label>
+          <input formControlName="fax" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Url</label>
+          <input formControlName="url" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Skype</label>
+          <input formControlName="skype_name" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Remarks</label>
+          <input formControlName="remarks" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">Contact Group ids</label>
+          <input formControlName="contact_group_ids" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-1">
+          <label class="pb-2">User id * (Please use the value contact id)</label>
+          <input formControlName="user_id" type="number" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="form-group mb-1">
+      <label class="pb-2">Owner Id * (Please use the value contact id)</label>
+      <input formControlName="owner_id" type="number" class="form-control">
+    </div>
+    <button [disabled]="form.invalid" class="mt-5 btn btn-info" type="submit">Submit</button>
+  </form>
+  <button class="btn btn-success p-3 mt-5"><a routerLink="List-Contact" style="text-decoration: none; color: #fff;">Show All List</a></button>
+</div>

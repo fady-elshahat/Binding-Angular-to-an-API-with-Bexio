@@ -1,0 +1,27 @@
+<section class="container mt-5">
+      <table class="table table-dark table-hover text-center">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Postcode</th>
+            <th>City</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of allList">
+            <th>{{contact.nr}}</th>
+            <td>{{contact.name_1}}</td>
+            <td>{{contact.postcode}}</td>
+            <td>{{contact.city}}</td>
+            <td>{{contact.address}}</td>
+            <td>{{contact.phone_fixed}}</td>
+            <td>{{contact.mail}}</td>
+          </tr>
+        </tbody>
+      </table>
+  <button class="btn btn-success p-3 mt-5"><a routerLink="/" style="text-decoration: none; color: #fff;">Back</a></button>
+</section>
